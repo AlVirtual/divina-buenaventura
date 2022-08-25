@@ -1,5 +1,5 @@
 <template>
-    <div class="galeria-cartas">
+    <div class="cards-galery">
       <div class="heaven">
         <h1>La Divina Buenaventura</h1>
         <button type="button" class="shakebutton" v-on:click="shakeCards(),mixCards(images),listCards()">
