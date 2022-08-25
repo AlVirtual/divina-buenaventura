@@ -13,7 +13,7 @@
       </div>
 
       <div class="showed-card">
-          <div class="">
+          <div v-if="selectedImage" id="showed-card" class="">
                 <img class="card" :src="selectedImage.carta" alt="" srcset="" />
                 <h2>{{ selectedImage.nombre }}</h2>
                 <p>{{ selectedImage.significado }}</p>
@@ -227,6 +227,7 @@ export default {
 
     showImage: function (image) {
         this.selectedImage = image;
+        return image;
     },
     
     mixCards: function (images) {
@@ -447,7 +448,7 @@ export default {
 } 
 
 .showed-card{
-  width: 80%;
+  width: 85%;
   display: flex;
   margin: 500px auto;
   border-bottom: 2px solid #d7be8a;
