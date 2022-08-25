@@ -1,7 +1,7 @@
 <template>
   <SiteHeader/>
 
-  <AllCarts/>      
+  <AllCards/>      
   
   <SiteFooter/>   
       
@@ -10,7 +10,7 @@
 <script>
 import SiteHeader from './components/SiteHeader.vue';
 import SiteFooter from './components/SiteFooter.vue';
-import AllCarts from './components/AllCarts.vue';
+import AllCards from './components/AllCards.vue';
 
 
 export default {
@@ -18,7 +18,7 @@ export default {
   components: {
     SiteHeader,
     SiteFooter,
-    AllCarts,
+    AllCards,
   },
   data() {
     return{

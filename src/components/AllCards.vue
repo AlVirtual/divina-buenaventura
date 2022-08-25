@@ -2,19 +2,19 @@
     <div class="galeria-cartas">
       <div class="heaven">
         <h1>La Divina Buenaventura</h1>
-        <button type="button" class="shakebutton" v-on:click="shakeCarts(),mixCarts(images),listCarts()">
+        <button type="button" class="shakebutton" v-on:click="shakeCards(),mixCards(images),listCards()">
         mezcla las cartas
         </button>
       </div>
-      <div class="slider-carts">
-            <div class="initial-position-carts" v-for="image in images" :key="image.id">
-            <a href="#" v-on:click="showImage(image)"><img class="image-fluid-cart cart" v-bind:src="image.backcart" alt=""/></a>
+      <div class="slider-cards">
+            <div class="initial-position-cards" v-for="image in images" :key="image.id">
+            <a href="#" v-on:click="showImage(image)"><img class="image-fluid-card card" v-bind:src="image.backcard" alt=""/></a>
             </div>
       </div>
 
-      <div class="showed-cart">
+      <div class="showed-card">
           <div class="">
-                <img class="cart" :src="selectedImage.carta" alt="" srcset="" />
+                <img class="card" :src="selectedImage.carta" alt="" srcset="" />
                 <h2>{{ selectedImage.nombre }}</h2>
                 <p>{{ selectedImage.significado }}</p>
           </div>
@@ -25,15 +25,15 @@
 
 <script>
 export default {
-    name: 'AllCarts',
+    name: 'AllCards',
   data() {
     return {
-      backcart: require("@/assets/cards/Fondo.jpg"),
+      backcard: require("@/assets/cards/Fondo.jpg"),
       selectedImage: "",
       images: [
         {
           id: 0,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/0-ElLoco.jpg"),
           nombre: "El Loco",
           significado:
@@ -41,7 +41,7 @@ export default {
         },
         {
           id: 1,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/1-ElMago.jpg"),
           nombre: "El Mago",
           significado:
@@ -49,7 +49,7 @@ export default {
         },
         {
           id: 2,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/2-LaSacerdotisa.jpg"),
           nombre: "La Sacerdotisa",
           significado:
@@ -57,7 +57,7 @@ export default {
         },
         {
           id: 3,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/3-LaEmperatriz.jpg"),
           nombre: "La Emperatriz",
           significado:
@@ -65,7 +65,7 @@ export default {
         },
         {
           id: 4,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/4-ElEmperador.jpg"),
           nombre: "El Emperador",
           significado:
@@ -73,7 +73,7 @@ export default {
         },
         {
           id: 5,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/5-ElSumoSacerdote.jpg"),
           nombre: "El Sumo Sacerdote",
           significado:
@@ -81,7 +81,7 @@ export default {
         },
         {
           id: 6,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/6-LosEnamorados.jpg"),
           nombre: "Los Enamorados",
           significado:
@@ -89,7 +89,7 @@ export default {
         },
         {
           id: 7,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/7-ElCarro.jpg"),
           nombre: "El Carro",
           significado:
@@ -97,7 +97,7 @@ export default {
         },
         {
           id: 8,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/8-LaJusticia.jpg"),
           nombre: "La Justicia",
           significado:
@@ -105,7 +105,7 @@ export default {
         },
         {
           id: 9,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/9-ElErmitaño.jpg"),
           nombre: "El Ermitaño",
           significado:
@@ -113,7 +113,7 @@ export default {
         },
         {
           id: 10,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/10-LaRuedadelaFortuna.jpg"),
           nombre: "La Rueda de la Fortuna",
           significado:
@@ -121,7 +121,7 @@ export default {
         },
         {
           id: 11,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/11-LaFuerza.jpg"),
           nombre: "La Fuerza",
           significado:
@@ -129,7 +129,7 @@ export default {
         },
         {
           id: 12,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/12-ElColgado.jpg"),
           nombre: "El Colgado",
           significado:
@@ -137,7 +137,7 @@ export default {
         },
         {
           id: 13,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/13-LaMuerte.jpg"),
           nombre: "El Arcano sin Nobre",
           significado:
@@ -145,7 +145,7 @@ export default {
         },
         {
           id: 14,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/14-LaTemplanza.jpg"),
           nombre: "La Templanza",
           significado:
@@ -153,7 +153,7 @@ export default {
         },
         {
           id: 15,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/15-ElDiablo.jpg"),
           nombre: "El Diablo",
           significado:
@@ -161,7 +161,7 @@ export default {
         },
         {
           id: 16,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/16-LaTorre.jpg"),
           nombre: "La Tore",
           significado:
@@ -169,7 +169,7 @@ export default {
         },
         {
           id: 17,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/17-LaEstrella.jpg"),
           nombre: "La Estrella",
           significado:
@@ -177,7 +177,7 @@ export default {
         },
         {
           id: 18,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/18-LaLuna.jpg"),
           nombre: "La Luna",
           significado:
@@ -185,7 +185,7 @@ export default {
         },
         {
           id: 19,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/19-ElSol.jpg"),
           nombre: "El Sol",
           significado:
@@ -193,7 +193,7 @@ export default {
         },
         {
           id: 20,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/20-ElJuicio.jpg"),
           nombre: "El Juicio",
           significado:
@@ -201,7 +201,7 @@ export default {
         },
         {
           id: 21,
-          backcart: require("@/assets/cards/Fondo.jpg"),
+          backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/21-ElMundo.jpg"),
           nombre: "El Mundo",
           significado:
@@ -212,8 +212,8 @@ export default {
   },
   methods: {
 
-    shakeCarts: function () {
-        const shakeclases = document.querySelectorAll(".initial-position-carts");
+    shakeCards: function () {
+        const shakeclases = document.querySelectorAll(".initial-position-cards");
         for (let i = 0; i < shakeclases.length; i++) {
         shakeclases[i].classList.toggle("shake" + [i]);
         }
@@ -229,7 +229,7 @@ export default {
         this.selectedImage = image;
     },
     
-    mixCarts: function (images) {
+    mixCards: function (images) {
         setTimeout(()=>{
             this.images = images.sort(function () {
                 return Math.random() - 0.5;
@@ -239,12 +239,12 @@ export default {
 
     },
     
-    listCarts: function () {
+    listCards: function () {
         setTimeout(()=>{
-            const listclases = document.querySelectorAll(".initial-position-carts");
+            const listclases = document.querySelectorAll(".initial-position-cards");
             console.log(listclases);
             for (let i = 0; i < listclases.length; i++) {
-                listclases[i].classList.toggle("initial-position-carts");
+                listclases[i].classList.toggle("initial-position-cards");
                 listclases[i].classList.toggle("list" + [i]);
             }
         },7000)
@@ -255,7 +255,7 @@ export default {
 
 <style scoped>
 
-.initial-position-carts {
+.initial-position-cards {
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -263,15 +263,15 @@ export default {
   position: absolute;
 }
 
-.shake-carts {
+.shake-cards {
   margin-bottom: 100px;
 }
 
-.image-fluid-cart:hover {
+.image-fluid-card:hover {
   margin-top: -20px;
 }
 
-.slider-carts {
+.slider-cards {
   width: 80%;
   margin: 10px auto 10px auto;
   display: flex;
@@ -446,10 +446,12 @@ export default {
     left: 73%;
 } 
 
-.showed-cart{
+.showed-card{
   width: 80%;
   display: flex;
   margin: 500px auto;
+  border-bottom: 2px solid #d7be8a;
+  padding-bottom: 50px;
 }
 
 
