@@ -1,26 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <SiteHeader/>
+
+  <AllCarts/>      
+  
+  <SiteFooter/>   
+      
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SiteHeader from './components/SiteHeader.vue';
+import SiteFooter from './components/SiteFooter.vue';
+import AllCarts from './components/AllCarts.vue';
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    SiteHeader,
+    SiteFooter,
+    AllCarts,
+  },
+  data() {
+    return{
+
+    }
+  },
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'EB Garamond', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #d7be8a;
+  
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
 </style>
