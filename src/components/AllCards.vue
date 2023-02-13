@@ -163,7 +163,7 @@ export default {
           id: 16,
           backcard: require("@/assets/cards/Fondo.jpg"),
           carta: require("@/assets/cards/16-LaTorre.jpg"),
-          nombre: "La Tore",
+          nombre: "La Torre",
           significado:
             "Oscura y amenazante, la Torre es la encarnación de la complicación y el conflicto. No solo el cambio, sino el movimiento brusco y desagradable causado por los acontecimientos imprevistos y traumáticos que forman parte de la vida. La Torre en tu tirada siempre es una amenaza, pero la vida inevitablemente implica tragedia, y debes de decidir si la enfrentarás con gracia.",
         },
@@ -248,7 +248,7 @@ export default {
                 listclases[i].classList.toggle("initial-position-cards");
                 listclases[i].classList.toggle("list" + [i]);
             }
-        },7000)
+        },6000)
     },
   },
 };
