@@ -2,23 +2,31 @@
     <div class="cards-galery">
       <div class="heaven">
         <h1>La Divina Buenaventura</h1>
+        <p class="sub-h">...mezcla y escoje una carta para saber que te depara la divina buenaventura...</p>
         <button type="button" class="shakebutton" v-on:click="shakeCards(),mixCards(images),listCards()">
-        mezcla las cartas
+        mezclar las cartas
         </button>
       </div>
       <div class="slider-cards">
             <div class="initial-position-cards" v-for="image in images" :key="image.id">
-            <a href="#" v-on:click="showImage(image)"><img class="image-fluid-card card" v-bind:src="image.backcard" alt=""/></a>
+            <a href="#" v-on:click="showImage(image),scrollToCard()"><img class="image-fluid-card card" v-bind:src="image.backcard" alt=""/></a>
             </div>
       </div>
-
-      <div class="showed-card">
+      <div>
+        <div class="showed-card">
           <div v-if="selectedImage" id="showed-card" class="">
                 <img class="card" :src="selectedImage.carta" alt="" srcset="" />
                 <h2>{{ selectedImage.nombre }}</h2>
                 <p>{{ selectedImage.significado }}</p>
           </div>
+        </div>
+        <button type="button" class="shakebutton" v-on:click="reload()">
+          volver a tirar
+        </button>
       </div>
+          <div class="button-reload">
+
+          </div>
     </div>
   
 </template>
@@ -250,6 +258,25 @@ export default {
             }
         },6000)
     },
+
+    scrollToCard: function(){
+        setTimeout(()=>{
+          window.scroll({
+              top: 700,
+              left: 0,
+              behavior: 'smooth'
+          });
+          
+        },100)
+        
+
+    },
+
+    reload: function(){
+        location.reload();
+        window.scrollTo(0, 0);
+    }
+
   },
 };
 </script>
@@ -450,10 +477,12 @@ export default {
 .showed-card{
   width: 85%;
   display: flex;
-  margin: 500px auto;
+  margin: 500px auto 10px auto;
   border-bottom: 2px solid #d7be8a;
   padding-bottom: 50px;
 }
 
-
+.button-reload{
+  margin: 0 auto;
+}
 </style>

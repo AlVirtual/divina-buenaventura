@@ -2,6 +2,7 @@ body{
     margin: 0 auto;
     background-color: #2e2e30; 
     font-family: 'EB Garamond', serif;
+    overflow-x: hidden;
 }
 
 .card{
@@ -26,8 +27,15 @@ h2{
     padding: 10px;
 }
 
+p.sub-h{
+    font-family: 'Lavishly Yours';
+    font-size: 1.7rem;
+    margin-top: 0px;
+    margin-bottom: 50px;
+
+}
+
 p{
-    
     font-size: 1.2rem;
 }
 
