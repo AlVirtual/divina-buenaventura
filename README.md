@@ -1,3 +1,5 @@
+Final free thematic project of the Front End Web Developer with VUE3 course (IFCD65)
+
 # divina-buenaventura
 
 ## Project setup
